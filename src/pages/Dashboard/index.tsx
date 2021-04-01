@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import Header from "../../components/Header";
+import Header from "../../components/Header/index";
 import ModalAddFood from "../../components/ModalAddFood";
 import ModalEditFood from "../../components/ModalEditFood";
-import Food from '../../components/Food/index3';
+import Food from '../../components/Food/index';
 import api from "../../services/api";
 import { FoodsContainer } from "./styles";
 
