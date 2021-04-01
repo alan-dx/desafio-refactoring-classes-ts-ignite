@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import ModalAddFood from "../../components/ModalAddFood";
 import ModalEditFood from "../../components/ModalEditFood";
-import Food from '../../components/Food';
+import Food from '../../components/Food/index3';
 import api from "../../services/api";
 import { FoodsContainer } from "./styles";
 
@@ -11,7 +11,7 @@ interface FoodType {
   name: string;
   description: string;
   price: string;
-  avaliable: boolean;
+  available: boolean;
   image: string
 }
 
@@ -44,7 +44,7 @@ export default function Dashboard() {
     try {
       const response = await api.post('/foods', {
         ...food,
-        avaliable: true
+        available: true
       })
 
       setFoods([...foods, response.data])
